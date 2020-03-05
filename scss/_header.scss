@@ -1,0 +1,47 @@
+
+header{
+  padding-top: 29px;
+  padding-bottom: 33px;
+}
+.header-top { 
+  @include flexbox();
+  justify-content: space-between;
+}
+.header-top-lang { 
+  @include flexbox();
+}
+.header-top-lang__item { 
+  display: block;
+  line-height: 19px;
+  color: #000;
+  font-size: 10px;
+  text-transform: uppercase;
+  font-family: Bebas;
+  letter-spacing: 1px;
+  padding: 0 4px;
+  margin-right: 10px;
+  &.active{
+    background-color: #000;
+    color: #fff;
+  }
+}
+.header-top__link { 
+  font-family: 'AkzidenzGroteskBQCondensedBold';
+  text-decoration: underline;
+  text-transform: uppercase;
+  font-size: 15px;
+  color: #000;
+}
+.header-bottom { @include flexbox();}
+.header-bottom__column { 
+  flex: 0 0 33.333%;
+}
+.header-bottom-menu { }
+.header-bottom-menu-list { }
+.header-bottom-menu__link { }
+.header-logo { }
+.header-logo__text { }
+.header-logo__image { }
+.header-bottom-menu--right { }
+.header-menu__icon { }
+.header-menu { }
