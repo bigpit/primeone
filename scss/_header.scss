@@ -57,13 +57,29 @@ header {
 }
 .header-bottom__column {
   flex: 0 0 33.333%;
+  @media (max-width: $md4+px) {
+    flex: 0 0 30.333%;
+  }
 }
 .header-bottom-menu {
+  @media (max-width: $md2+px) {
+    display: block;
+  }
 }
 .header-bottom-menu-list {
   @include flexbox();
   justify-content: space-between;
   li {
+  }
+  @media (max-width: $md2+px) {
+    text-align: left;
+    display: block;
+    li {
+      margin: 0px 0px 15px 0px !important;
+      &:last-child {
+        margin: 0px 0px 0px 0px;
+      }
+    }
   }
 }
 .header-bottom-menu__link {
@@ -97,8 +113,8 @@ header {
       width: 150px;
     }
   }
-  @media (max-width: $md4+px){
-    img{
+  @media (max-width: $md4+px) {
+    img {
       width: 100px;
     }
   }
