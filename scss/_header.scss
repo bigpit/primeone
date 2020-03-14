@@ -135,7 +135,7 @@ header {
   .header-menu__icon {
     display: block;
     position: absolute;
-    top: 28px;
+    top: 50px;
     left: 10px;
     width: 30px;
     height: 18px;
@@ -184,6 +184,9 @@ header {
     &.active {
       left: 0;
     }
+  }
+  .header-top__link {
+    top: 30px;
   }
 }
 @media (max-width: $md4+px) {

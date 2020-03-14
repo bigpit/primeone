@@ -83,6 +83,59 @@ h1,h2,h3,h4,h5,h6{font-weight: inherit;font-size: inherit;}
 	@media (max-width:$md2+px){max-width: none;padding:0 10px;}
 }
 //</ОСНОВНАЯ СЕТКА>
+.private { 
+	@include flexbox();
+	background-color: #000;
+}
+.private__column { 
+	flex:0 0 50%;
+}
+.private__image { 
+	max-height: 430px;
+	height: 100%;
+	width: 100%;
+	img{
+		object-fit: cover;
+    width: 100%;
+    height: 100%;
+	}
+}
+.private-body { 
+	padding: 75px 0px 70px 60px;
+}
+.private-body-content{
+	max-width: 305px;
+}
+.private-body__title { 
+	text-transform: uppercase;
+	color: white;
+	font-size: 50px;
+	font-family: 'AkzidenzGroteskBQCondensedBold';
+	letter-spacing: 5px;
+	margin-bottom: 30px;
+}
+.private-body__text { 
+	font-size: 15px;
+	line-height: 25px;
+	color: white;
+	margin-bottom: 50px;
+}
+.private-body-buttons { 
+	@include flexbox();
+	align-items: center;
+}
+.private-body-buttons__item { }
+.btn { }
+.btn--w { }
+.private-body-buttons__link { 
+	font-family: Bebas;
+	text-transform: uppercase;
+	color: white;
+	font-size: 15px;
+	margin-left: 15px;
+	text-decoration: underline;
+	letter-spacing: 1.5px;
+}
 
 //<ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>
 //@import "datepicker.scss";
@@ -94,6 +147,6 @@ h1,h2,h3,h4,h5,h6{font-weight: inherit;font-size: inherit;}
 //</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>
 
 //<ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>
-//@import "forms.scss";
+@import "_forms.scss";
 //@import "ui.scss";
 //</ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>
