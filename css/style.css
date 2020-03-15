@@ -148,8 +148,18 @@ h1, h2, h3, h4, h5, h6 {
           flex: 0 0 50%;
 }
 
+@media (max-width: 479.98px) {
+  .private__column {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+  }
+  .private__column:first-child {
+    display: none;
+  }
+}
+
 .private__image {
-  max-height: 430px;
   height: 100%;
   width: 100%;
 }
@@ -165,6 +175,18 @@ h1, h2, h3, h4, h5, h6 {
   padding: 75px 0px 70px 60px;
 }
 
+@media (max-width: 767.98px) {
+  .private-body {
+    padding: 50px 0px 45px 40px;
+  }
+}
+
+@media (max-width: 479.98px) {
+  .private-body {
+    padding: 40px 0px 40px 20px;
+  }
+}
+
 .private-body-content {
   max-width: 305px;
 }
@@ -178,11 +200,31 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 30px;
 }
 
+@media (max-width: 767.98px) {
+  .private-body__title {
+    font-size: 36px;
+    letter-spacing: 3px;
+    padding-right: 8px;
+  }
+}
+
+@media (max-width: 479.98px) {
+  .private-body__title {
+    font-size: 28px;
+  }
+}
+
 .private-body__text {
   font-size: 15px;
   line-height: 25px;
   color: white;
   margin-bottom: 50px;
+}
+
+@media (max-width: 767.98px) {
+  .private-body__text {
+    padding-right: 15px;
+  }
 }
 
 .private-body-buttons {
@@ -216,7 +258,7 @@ header {
         -ms-flex-pack: end;
             justify-content: flex-end;
     padding-top: 18px;
-    padding-bottom: 33px;
+    padding-bottom: 20px;
   }
 }
 
@@ -278,9 +320,17 @@ header {
   color: #000;
 }
 
+@media (max-width: 767.98px) {
+  .header-top__link {
+    font-size: 14px;
+    top: 30px;
+  }
+}
+
 @media (max-width: 479.98px) {
   .header-top__link {
     font-size: 14px;
+    top: 20px;
   }
 }
 
@@ -442,7 +492,7 @@ header {
     height: 100%;
     overflow: auto;
     left: -120%;
-    top: 0;
+    top: 40px;
     background-color: #fff;
     padding: 65px 10px 0px 10px;
     -webkit-transition: all 0.6s ease 0s;
@@ -451,14 +501,17 @@ header {
   .header-menu.active {
     left: 0;
   }
-  .header-top__link {
-    top: 30px;
+  .private__image {
+    max-height: unset;
+  }
+  .private-body-content {
+    max-width: 290px;
   }
 }
 
 @media (max-width: 479.98px) {
   .header-menu__icon {
-    top: 18px;
+    top: 35px;
   }
 }
 
@@ -494,6 +547,12 @@ header {
 
 .btn.fw {
   width: 100%;
+}
+
+@media (max-width: 767.98px) {
+  .btn {
+    padding: 0px 15px;
+  }
 }
 
 .select-block {

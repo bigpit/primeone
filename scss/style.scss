@@ -89,9 +89,14 @@ h1,h2,h3,h4,h5,h6{font-weight: inherit;font-size: inherit;}
 }
 .private__column { 
 	flex:0 0 50%;
+	@media (max-width: $md4+px) {
+		flex: 1 1 100%;
+		&:first-child{
+			display: none;
+		}
+  }
 }
 .private__image { 
-	max-height: 430px;
 	height: 100%;
 	width: 100%;
 	img{
@@ -102,6 +107,12 @@ h1,h2,h3,h4,h5,h6{font-weight: inherit;font-size: inherit;}
 }
 .private-body { 
 	padding: 75px 0px 70px 60px;
+	@media (max-width: $md2+px) {
+		padding: 50px 0px 45px 40px;
+	}
+	@media (max-width: $md4+px) {
+		padding: 40px 0px 40px 20px;
+  }
 }
 .private-body-content{
 	max-width: 305px;
@@ -113,19 +124,34 @@ h1,h2,h3,h4,h5,h6{font-weight: inherit;font-size: inherit;}
 	font-family: 'AkzidenzGroteskBQCondensedBold';
 	letter-spacing: 5px;
 	margin-bottom: 30px;
+	@media (max-width: $md2+px) {
+		font-size: 36px;
+		letter-spacing: 3px;
+		padding-right: 8px;
+	}
+	@media (max-width: $md4+px) {
+		font-size: 28px;
+  }
 }
 .private-body__text { 
 	font-size: 15px;
 	line-height: 25px;
 	color: white;
 	margin-bottom: 50px;
+	@media (max-width: $md2+px) {
+		padding-right: 15px;
+  }
 }
 .private-body-buttons { 
 	@include flexbox();
 	align-items: center;
 }
-.private-body-buttons__item { }
-.btn { }
+.private-body-buttons__item { 
+
+}
+.btn { 
+
+}
 .btn--w { }
 .private-body-buttons__link { 
 	font-family: Bebas;
@@ -136,6 +162,18 @@ h1,h2,h3,h4,h5,h6{font-weight: inherit;font-size: inherit;}
 	text-decoration: underline;
 	letter-spacing: 1.5px;
 }
+
+.products { }
+.container { }
+.products-body { }
+.products__column { }
+.products-item { }
+.products-item__image { }
+.products-item__title { }
+.products-item__text { }
+.products-item__btn { }
+.btn { }
+.products-item__link { }
 
 //<ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>
 //@import "datepicker.scss";

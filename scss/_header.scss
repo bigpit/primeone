@@ -4,7 +4,7 @@ header {
   @media (max-width: $md2+px) {
     justify-content: flex-end;
     padding-top: 18px;
-    padding-bottom: 33px;
+    padding-bottom: 20px;
   }
 }
 .header-top {
@@ -43,8 +43,13 @@ header {
   text-transform: uppercase;
   font-size: 16px;
   color: #000;
+  @media (max-width: $md2+px) {
+    font-size: 14px;
+    top: 30px;
+  }
   @media (max-width: $md4+px) {
     font-size: 14px;
+    top: 20px;
   }
 }
 .header-bottom {
@@ -177,7 +182,7 @@ header {
     height: 100%;
     overflow: auto;
     left: -120%;
-    top: 0;
+    top: 40px;
     background-color: #fff;
     padding: 65px 10px 0px 10px;
     @include anim(0.6s, 0s);
@@ -185,12 +190,15 @@ header {
       left: 0;
     }
   }
-  .header-top__link {
-    top: 30px;
+  .private__image {
+    max-height: unset;
+  }
+  .private-body-content {
+    max-width: 290px;
   }
 }
 @media (max-width: $md4+px) {
   .header-menu__icon {
-    top: 18px;
+    top: 35px;
   }
 }
