@@ -1,211 +1,420 @@
 //<Подключаем шрифты>
 //<МИКСИНЫ>
-@mixin anim($time,$delay){-webkit-transition: all $time ease $delay;-moz-transition: all $time ease $delay;-ms-transition: all $time ease $delay;-o-transition: all $time ease $delay;transition: all $time ease $delay;}
-@mixin anim_cubic($time, $delay) {-webkit-transition:all $time cubic-bezier(0.68,-0.55,0.265,1.55) $delay;-moz-transition:all $time cubic-bezier(0.68,-0.55,0.265,1.55) $delay;-ms-transition:all $time cubic-bezier(0.68,-0.55,0.265,1.55) $delay;-o-transition:all $time cubic-bezier(0.68,-0.55,0.265,1.55) $delay;transition:all $time cubic-bezier(0.68,-0.55,0.265,1.55) $delay;}
-@mixin rotate($deg){-moz-transform: rotate($deg);-ms-transform: rotate($deg);-webkit-transform: rotate($deg);-o-transform: rotate($deg);transform: rotate($deg);}
-@mixin scale($num){-moz-transform: scale($num);-ms-transform: scale($num);-webkit-transform: scale($num);-o-transform: scale($num);transform: scale($num);}
-@mixin skew($num){-webkit-transform: skewX($num);-moz-transform: skewX($num);-ms-transform: skewX($num);-o-transform: skewX($num);transform: skewX($num);}
-@mixin cnt($h){display: flex;flex-direction: column;height: $h;text-align: center;align-items: stretch;justify-content: center;}
-@mixin tr($x,$y,$z){transform: translate3d($x, $y, $z);};
-@mixin flexbox() {display: -webkit-box;display: -moz-box;display: -ms-flexbox;display: -webkit-flex;display: flex;font-size: 0;}
-@mixin flexorder($val){-webkit-box-ordinal-group: $val;-moz-box-ordinal-group: $val;-ms-flex-order: $val;-webkit-order: $val;order: $val;}
+@mixin anim($time, $delay) {
+  -webkit-transition: all $time ease $delay;
+  -moz-transition: all $time ease $delay;
+  -ms-transition: all $time ease $delay;
+  -o-transition: all $time ease $delay;
+  transition: all $time ease $delay;
+}
+@mixin anim_cubic($time, $delay) {
+  -webkit-transition: all $time cubic-bezier(0.68, -0.55, 0.265, 1.55) $delay;
+  -moz-transition: all $time cubic-bezier(0.68, -0.55, 0.265, 1.55) $delay;
+  -ms-transition: all $time cubic-bezier(0.68, -0.55, 0.265, 1.55) $delay;
+  -o-transition: all $time cubic-bezier(0.68, -0.55, 0.265, 1.55) $delay;
+  transition: all $time cubic-bezier(0.68, -0.55, 0.265, 1.55) $delay;
+}
+@mixin rotate($deg) {
+  -moz-transform: rotate($deg);
+  -ms-transform: rotate($deg);
+  -webkit-transform: rotate($deg);
+  -o-transform: rotate($deg);
+  transform: rotate($deg);
+}
+@mixin scale($num) {
+  -moz-transform: scale($num);
+  -ms-transform: scale($num);
+  -webkit-transform: scale($num);
+  -o-transform: scale($num);
+  transform: scale($num);
+}
+@mixin skew($num) {
+  -webkit-transform: skewX($num);
+  -moz-transform: skewX($num);
+  -ms-transform: skewX($num);
+  -o-transform: skewX($num);
+  transform: skewX($num);
+}
+@mixin cnt($h) {
+  display: flex;
+  flex-direction: column;
+  height: $h;
+  text-align: center;
+  align-items: stretch;
+  justify-content: center;
+}
+@mixin tr($x, $y, $z) {
+  transform: translate3d($x, $y, $z);
+}
+@mixin flexbox() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0;
+}
+@mixin flexorder($val) {
+  -webkit-box-ordinal-group: $val;
+  -moz-box-ordinal-group: $val;
+  -ms-flex-order: $val;
+  -webkit-order: $val;
+  order: $val;
+}
 //</МИКСИНЫ>
 
-@import url('https://fonts.googleapis.com/css?family=PT+Sans&display=swap');
+@import url("https://fonts.googleapis.com/css?family=PT+Sans&display=swap");
 @font-face {
-	font-family: 'AkzidenzGroteskBQCondensedBold';
-	src: url('../fonts/AkzidenzGroteskBQCondensedBold.eot');
-	src: local('☺'), url('../fonts/AkzidenzGroteskBQCondensedBold.woff') format('woff'), url('../fonts/AkzidenzGroteskBQCondensedBold.ttf') format('truetype'), url('../fonts/AkzidenzGroteskBQCondensedBold.svg') format('svg');
-	font-weight: normal;
-	font-style: normal;
+  font-family: "AkzidenzGroteskBQCondensedBold";
+  src: url("../fonts/AkzidenzGroteskBQCondensedBold.eot");
+  src: local("☺"),
+    url("../fonts/AkzidenzGroteskBQCondensedBold.woff") format("woff"),
+    url("../fonts/AkzidenzGroteskBQCondensedBold.ttf") format("truetype"),
+    url("../fonts/AkzidenzGroteskBQCondensedBold.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
 }
 @font-face {
-	font-family: 'Bebas';
-	src: url('../fonts/BebasNeueRegular.eot');
-	src: local('☺'), url('../fonts/BebasNeueRegular.woff') format('woff'), url('../fonts/BebasNeueRegular.ttf') format('truetype'), url('../fonts/BebasNeueRegular.svg') format('svg');
-	font-weight: normal;
-	font-style: normal;
+  font-family: "Bebas";
+  src: url("../fonts/BebasNeueRegular.eot");
+  src: local("☺"), url("../fonts/BebasNeueRegular.woff") format("woff"),
+    url("../fonts/BebasNeueRegular.ttf") format("truetype"),
+    url("../fonts/BebasNeueRegular.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
 }
 
 //<Шрифт по умолчанию>
-$fontfamily:"PT Sans";
+$fontfamily: "PT Sans";
 //</Шрифт по умолчанию>
 //</ШРИФТЫ>
 
 //<ПЕРЕМЕННЫЕ>
-$minwidth:320px;
-$mw:880;
-$md1:$mw+12;
-$md2:767.98;
+$minwidth: 320px;
+$mw: 880;
+$md1: $mw + 12;
+$md2: 767.98;
 // $md2:700;
-$md3:767.98;
-$md4:479.98;
+$md3: 767.98;
+$md4: 479.98;
 //</ПЕРЕМЕННЫЕ>
 
 //<ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>
-*{padding: 0px;margin: 0px;border: 0px;}
-*,*:before,*:after{-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
-:focus,:active{outline: none;}
-a:focus,a:active{outline: none;}
-aside,nav,footer,header,section{display: block;}
-html,body{height: 100%;margin: 0;padding: 0;min-width: $minwidth;position: relative;width: 100%;color: #000;}
-body{font-size: 100%;line-height: 1;font-size: 14px;font-family: $fontfamily;-ms-text-size-adjust: 100%;-moz-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;
-	&.lock{overflow: hidden;
-		@media (max-width:$md3+px){
-			width: 100%;
-			position: fixed;
-			overflow: hidden;
-		}
-	}
+* {
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
 }
-input,button,textarea{font-family: $fontfamily;}
-input::-ms-clear{display: none;}
-button{cursor: pointer;}
-button::-moz-focus-inner {padding:0;border:0;}
-a, a:visited{text-decoration: none;}
-a:hover{text-decoration: none;}
-ul li{list-style: none;}
-img{vertical-align: top;}
-h1,h2,h3,h4,h5,h6{font-weight: inherit;font-size: inherit;}
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+:focus,
+:active {
+  outline: none;
+}
+a:focus,
+a:active {
+  outline: none;
+}
+aside,
+nav,
+footer,
+header,
+section {
+  display: block;
+}
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  min-width: $minwidth;
+  position: relative;
+  width: 100%;
+  color: #000;
+}
+body {
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  font-family: $fontfamily;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  &.lock {
+    overflow: hidden;
+    @media (max-width: $md3+px) {
+      width: 100%;
+      position: fixed;
+      overflow: hidden;
+    }
+  }
+}
+input,
+button,
+textarea {
+  font-family: $fontfamily;
+}
+input::-ms-clear {
+  display: none;
+}
+button {
+  cursor: pointer;
+}
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+a,
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+ul li {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
 //-webkit-overflow-scrolling: touch;
 //animation-play-state: paused !important;
 //</ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>
 
 //<ОБОЛОЧКА>
-.wrapper{width: 100%;min-height: 100%;overflow: hidden;
-	&.loaded{}
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  &.loaded {
+  }
 }
 //</ОБОЛОЧКА>
 
 //<ОСНОВНАЯ СЕТКА>
-.container{max-width:$mw+px;margin: 0 auto;width: 100%;
-	@media (max-width:$md1+px){max-width: 750px;}
-	@media (max-width:$md2+px){max-width: none;padding:0 10px;}
+.container {
+  max-width: $mw + px;
+  margin: 0 auto;
+  width: 100%;
+  @media (max-width: $md1+px) {
+    max-width: 750px;
+  }
+  @media (max-width: $md2+px) {
+    max-width: none;
+    padding: 0 10px;
+  }
 }
 //</ОСНОВНАЯ СЕТКА>
-.private { 
-	@include flexbox();
-	background-color: #000;
-	margin-bottom: 75px;
-}
-.private__column { 
-	flex:0 0 50%;
-	@media (max-width: $md4+px) {
-		flex: 1 1 100%;
-		&:first-child{
-			display: none;
-		}
+.private {
+  @include flexbox();
+  background-color: #000;
+  margin-bottom: 75px;
+  @media (max-width: $md2+px) {
+    margin-bottom: 40px;
   }
 }
-.private__image { 
-	height: 100%;
-	width: 100%;
-	img{
-		object-fit: cover;
+.private__column {
+  flex: 0 0 50%;
+  @media (max-width: $md4+px) {
+    flex: 1 1 100%;
+    &:first-child {
+      display: none;
+    }
+  }
+}
+.private__image {
+  height: 100%;
+  width: 100%;
+  img {
+    object-fit: cover;
     width: 100%;
     height: 100%;
-	}
-}
-.private-body { 
-	padding: 75px 0px 70px 60px;
-	@media (max-width: $md2+px) {
-		padding: 50px 0px 45px 40px;
-	}
-	@media (max-width: $md4+px) {
-		padding: 40px 0px 40px 20px;
   }
 }
-.private-body-content{
-	max-width: 305px;
+.private-body {
+  padding: 75px 0px 70px 60px;
+  @media (max-width: $md2+px) {
+    padding: 50px 0px 45px 40px;
+  }
+  @media (max-width: $md4+px) {
+    padding: 40px 0px 40px 20px;
+  }
 }
-.private-body__title { 
-	text-transform: uppercase;
-	color: white;
-	font-size: 50px;
-	font-family: 'AkzidenzGroteskBQCondensedBold';
-	letter-spacing: 5px;
+.private-body-content {
+  max-width: 305px;
+}
+.private-body__title {
+  text-transform: uppercase;
+  color: white;
+  font-size: 50px;
+  font-family: "AkzidenzGroteskBQCondensedBold";
+  letter-spacing: 5px;
+  margin-bottom: 30px;
+  @media (max-width: $md2+px) {
+    font-size: 36px;
+    letter-spacing: 3px;
+    padding-right: 8px;
+  }
+  @media (max-width: $md4+px) {
+    font-size: 28px;
+  }
+}
+.private-body__text {
+  font-size: 15px;
+  line-height: 25px;
+  color: white;
+  margin-bottom: 50px;
+  @media (max-width: $md2+px) {
+    padding-right: 15px;
+  }
+}
+.private-body-buttons {
+  @include flexbox();
+  align-items: center;
+}
+.private-body-buttons__item {
+}
+.btn {
+}
+.btn--w {
+}
+.private-body-buttons__link {
+  font-family: Bebas;
+  text-transform: uppercase;
+  color: white;
+  font-size: 15px;
+  margin-left: 15px;
+  text-decoration: underline;
+  letter-spacing: 1.5px;
+}
+
+//====================================================================================================
+.products {
+  margin-bottom: 40px;
+}
+
+.products-body {
+  @include flexbox();
+  @media (max-width: $md2+px) {
+    flex-wrap: wrap;
+  }
+}
+.products__column {
+  flex: 0 0 25%;
+  margin-bottom: 40px;
+  @media (max-width: $md2+px) {
+    flex: 0 0 50%;
+	}
+	@media (max-width:380px){
+		flex: 1 1 100%;
+	}
+}
+.products-item {
+  @include flexbox();
+  flex-direction: column;
+  height: 100%;
+}
+.products-item__image {
+  margin-bottom: 20px;
+  display: block;
+  img {
+    width: 100%;
+    height: auto;
+    min-height: 225px;
+    @media (max-width: $md1+px) {
+      min-height: 200px;
+		}
+		@media (max-width: $md2+px) {
+      min-height: 100px;
+    }
+  }
+}
+.products-item__title {
+  padding-right: 10px;
+  max-width: 185px;
+  display: block;
+  font-size: 25px;
+  font-family: "AkzidenzGroteskBQCondensedBold";
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: black;
 	margin-bottom: 30px;
-	@media (max-width: $md2+px) {
-		font-size: 36px;
-		letter-spacing: 3px;
-		padding-right: 8px;
-	}
-	@media (max-width: $md4+px) {
-		font-size: 28px;
-  }
-}
-.private-body__text { 
-	font-size: 15px;
-	line-height: 25px;
-	color: white;
-	margin-bottom: 50px;
-	@media (max-width: $md2+px) {
-		padding-right: 15px;
-  }
-}
-.private-body-buttons { 
-	@include flexbox();
-	align-items: center;
-}
-.private-body-buttons__item { 
-
-}
-.btn { 
-
-}
-.btn--w { }
-.private-body-buttons__link { 
-	font-family: Bebas;
-	text-transform: uppercase;
-	color: white;
-	font-size: 15px;
-	margin-left: 15px;
-	text-decoration: underline;
-	letter-spacing: 1.5px;
-}
-
-.products { }
-.container { }
-.products-body { 
-	@include flexbox();
-}
-.products__column { 
-	flex: 0 0 25%;
-}
-.products-item { }
-.products-item__image { 
-	margin-bottom: 20px;
-	display: block;
-	img{
-		width: 100%;
-		height: auto;
+	@media (max-width:380px){
+		max-width: none;
+		margin-bottom: 10px;
 	}
 }
-.products-item__title { 
-	display: block;
-	font-size: 25px;
-	font-family: 'AkzidenzGroteskBQCondensedBold';
-	letter-spacing: 2.5px;
-	text-transform: uppercase;
-	color: black;
+.products-item__text {
+  flex: 1 1 auto;
+  padding-right: 10px;
+  max-width: 185px;
+  font-size: 15px;
+  line-height: 25px;
 	margin-bottom: 30px;
+	@media (max-width:380px){
+		max-width: none;
+		margin-bottom: 10px;
+	}
 }
-.products-item__text { 
-	font-size: 15px;
-	line-height: 25px;
-	margin-bottom: 20px;
-}
-.products-item__btn { 
+.products-item__btn {
 	margin-bottom: 25px;
+	@media (max-width:380px){
+		margin-bottom: 15px;
+	}
 }
-.btn { }
-.products-item__link { 
-	font-family: Bebas;
+.btn {
+}
+.products-item__link {
+  font-family: Bebas;
+  text-transform: uppercase;
+  color: #000;
+  text-decoration: underline;
+  font-size: 15px;
+  letter-spacing: 1.5px;
+}
+
+//====================================================================================================
+.why { }
+.why-top { 
+	@include flexbox();
+	background-color: #121212;
+}
+.why-top__column { 
+	flex: 0 0 50%;
+}
+.why-top__text { 
+	color: #fff;
+	font-family: "AkzidenzGroteskBQCondensedBold";
+	font-size: 50px;
 	text-transform: uppercase;
-	color: #000;
-	text-decoration: underline;
-	font-size: 15px;
+	letter-spacing: 5px;
+	text-align: right;
+	padding: 50px 50px 50px 0;
 }
+.why-top__image { 
+	height: 100%;
+}
+.why-body { }
+.why-body__column { }
+.why-body__item { }
+.why-bode-item__icon { }
+.why-bode-item-body { }
+.why-bode-item-body__title { }
+.why-bode-item-body__text { }
 
 //<ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>
 //@import "datepicker.scss";

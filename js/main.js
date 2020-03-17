@@ -56,6 +56,7 @@ function adaptive_function() {
 		$.each($('.ibg'), function(index, val) {
 			if($(this).find('img').length>0){
 				$(this).css('background-image','url("'+$(this).find('img').attr('src')+'")');
+				$(this).css('background-repeat', 'no-repeat');
 			}
 		});
 	}
