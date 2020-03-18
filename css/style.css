@@ -417,6 +417,23 @@ h6 {
           flex: 0 0 50%;
 }
 
+@media (max-width: 892px) {
+  .why-top__column {
+    margin: auto 0;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .why-top__column {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+  }
+  .why-top__column:last-child {
+    display: none;
+  }
+}
+
 .why-top__text {
   color: #fff;
   font-family: "AkzidenzGroteskBQCondensedBold";
@@ -427,8 +444,113 @@ h6 {
   padding: 50px 50px 50px 0;
 }
 
+@media (max-width: 892px) {
+  .why-top__text {
+    padding-right: 20px;
+    font-size: 40px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 479.98px) {
+  .why-top__text {
+    font-size: 30px;
+  }
+}
+
 .why-top__image {
   height: 100%;
+}
+
+.why-body {
+  background-color: #ebebeb;
+  padding-top: 50px;
+}
+
+.why-body-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.why-body__column {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+  margin-bottom: 50px;
+}
+
+@media (max-width: 767.98px) {
+  .why-body__column {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+  }
+}
+
+.why-body__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0;
+}
+
+.why-bode-item__icon {
+  height: 100px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 132px;
+          flex: 1 1 132px;
+  background-color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.why-bode-item-body {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
+  padding-left: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.why-bode-item-body__title {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  font-size: 25px;
+  font-family: "Akzidenz-Grotesk BQ Condensed";
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 479.98px) {
+  .why-bode-item-body__title {
+    font-size: 20px;
+  }
+}
+
+.why-bode-item-body__text {
+  font-size: 15px;
+  line-height: 25px;
+  padding-right: 15px;
 }
 
 header {

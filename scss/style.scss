@@ -318,10 +318,10 @@ h6 {
   margin-bottom: 40px;
   @media (max-width: $md2+px) {
     flex: 0 0 50%;
-	}
-	@media (max-width:380px){
-		flex: 1 1 100%;
-	}
+  }
+  @media (max-width: 380px) {
+    flex: 1 1 100%;
+  }
 }
 .products-item {
   @include flexbox();
@@ -337,8 +337,8 @@ h6 {
     min-height: 225px;
     @media (max-width: $md1+px) {
       min-height: 200px;
-		}
-		@media (max-width: $md2+px) {
+    }
+    @media (max-width: $md2+px) {
       min-height: 100px;
     }
   }
@@ -352,11 +352,11 @@ h6 {
   letter-spacing: 2.5px;
   text-transform: uppercase;
   color: black;
-	margin-bottom: 30px;
-	@media (max-width:380px){
-		max-width: none;
-		margin-bottom: 10px;
-	}
+  margin-bottom: 30px;
+  @media (max-width: 380px) {
+    max-width: none;
+    margin-bottom: 10px;
+  }
 }
 .products-item__text {
   flex: 1 1 auto;
@@ -364,17 +364,17 @@ h6 {
   max-width: 185px;
   font-size: 15px;
   line-height: 25px;
-	margin-bottom: 30px;
-	@media (max-width:380px){
-		max-width: none;
-		margin-bottom: 10px;
-	}
+  margin-bottom: 30px;
+  @media (max-width: 380px) {
+    max-width: none;
+    margin-bottom: 10px;
+  }
 }
 .products-item__btn {
-	margin-bottom: 25px;
-	@media (max-width:380px){
-		margin-bottom: 15px;
-	}
+  margin-bottom: 25px;
+  @media (max-width: 380px) {
+    margin-bottom: 15px;
+  }
 }
 .btn {
 }
@@ -388,33 +388,91 @@ h6 {
 }
 
 //====================================================================================================
-.why { }
-.why-top { 
-	@include flexbox();
-	background-color: #121212;
+.why {
 }
-.why-top__column { 
-	flex: 0 0 50%;
+.why-top {
+  @include flexbox();
+  background-color: #121212;
 }
-.why-top__text { 
-	color: #fff;
-	font-family: "AkzidenzGroteskBQCondensedBold";
-	font-size: 50px;
-	text-transform: uppercase;
-	letter-spacing: 5px;
-	text-align: right;
-	padding: 50px 50px 50px 0;
+.why-top__column {
+  flex: 0 0 50%;
+  @media (max-width: $md1+px) {
+    margin: auto 0;
+  }
+  @media (max-width: $md2+px) {
+    flex:1 1 auto;
+    &:last-child{
+      display: none;
+    }
+  }
 }
-.why-top__image { 
-	height: 100%;
+.why-top__text {
+  color: #fff;
+  font-family: "AkzidenzGroteskBQCondensedBold";
+  font-size: 50px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  text-align: right;
+  padding: 50px 50px 50px 0;
+  @media (max-width: $md1+px) {
+    padding-right: 20px;
+    font-size: 40px;
+    text-align: center;
+  }
+  @media (max-width: $md4+px) {
+    font-size: 30px;
+  }
 }
-.why-body { }
-.why-body__column { }
-.why-body__item { }
-.why-bode-item__icon { }
-.why-bode-item-body { }
-.why-bode-item-body__title { }
-.why-bode-item-body__text { }
+.why-top__image {
+  height: 100%;
+}
+.why-body {
+  background-color: #ebebeb;
+  padding-top: 50px;
+}
+.why-body-row {
+  @include flexbox();
+  flex-wrap: wrap;
+}
+.why-body__column {
+  flex: 0 0 50%;
+  margin-bottom: 50px;
+  @media (max-width: $md2+px) {
+    flex: 1 1 100%;
+  }
+}
+.why-body__item {
+  @include flexbox();
+}
+.why-bode-item__icon {
+  height: 100px;
+  flex: 1 1 132px;
+  background-color: black;
+  @include flexbox();
+  justify-content: center;
+  align-items: center;
+}
+.why-bode-item-body {
+  flex: 1 1 100%;
+  padding-left: 10px;
+  @include flexbox();
+  flex-direction: column;
+}
+.why-bode-item-body__title {
+  flex: 1 1 auto;
+  font-size: 25px;
+  font-family: "Akzidenz-Grotesk BQ Condensed";
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  @media (max-width: $md4+px) {
+    font-size: 20px;
+  }
+}
+.why-bode-item-body__text {
+  font-size: 15px;
+  line-height: 25px;
+  padding-right: 15px;
+}
 
 //<ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>
 //@import "datepicker.scss";
