@@ -474,6 +474,142 @@ h6 {
   padding-right: 15px;
 }
 
+//====================================================================================================
+.contacts { 
+  padding-top: 80px;
+  @media (max-width:$md2+px){
+    padding-top: 30px;
+  }
+}
+.contacts-top { }
+.container { }
+.contacts__title { 
+    font-size: 50px;
+    font-family: "Akzidenz-Grotesk BQ Condensed";
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
+    text-align: left;
+    letter-spacing: 5px;
+    margin-bottom: 30px;
+}
+.contacts-body { 
+  @include flexbox();
+  flex-wrap: wrap;
+}
+.contact-body__column { 
+  flex: 0 0 50%;
+  margin-bottom: 20px;
+  @media (max-width:$md2+px){
+    flex: 1 1 100%;
+  }
+}
+.contacts-body__item { 
+  font-size: 15px;
+  color: #000;
+  display: inline-block;
+  line-height: 27px;
+  padding-left: 35px;
+}
+.contacts-body__item--1 { 
+  background: url('../img/contacts/01.svg') left no-repeat;
+}
+.contacts-body__item--2 { 
+  background: url('../img/contacts/02.svg') left no-repeat;
+}
+.contacts-body__item--3 { 
+  background: url('../img/contacts/03.svg') left no-repeat;
+}
+.contacts-social { 
+  @include flexbox();
+}
+.contacts-social__item { 
+  margin-right: 30px;
+  &:last-child{
+
+  }
+}
+.contacts-social__item--1 { 
+  
+}
+.contacts-social__item--2 { }
+.contacts-social__item--3 { }
+.contacts-social__item--4 { }
+.contacts-content { 
+  @include flexbox();
+  background-color: #000;
+  @media (max-width:$md3+px){
+    display: block;
+  }
+}
+.contacts-content__column { 
+  flex: 0 0 50%;
+}
+.contacts-content__map { 
+  height: 100%;
+  @media (max-width:$md3+px){
+    height: 300px;
+  }
+}
+.contacts-content-form { 
+  padding: 55px 60px;
+  @media (max-width:$md3+px){
+    padding: 30px;
+  }
+}
+.contacts-content-form__title { 
+    font-size: 25px;
+    font-family: "Akzidenz-Grotesk BQ Condensed";
+    text-transform: uppercase;
+    color: #fff;
+    letter-spacing: 5px;
+    margin-bottom: 30px;
+}
+.contacts-content-form-body { 
+  max-width: 350px;
+  @media (max-width:$md3+px){
+    max-width: none;
+  }
+}
+.contacts-content-form-line { 
+  margin-bottom: 25px;
+}
+
+
+.footer-body { 
+  @include flexbox();
+  justify-content: space-between;
+  height: 125px;
+  align-items: center;
+  @media (max-width:$md2+px){
+    height: auto;
+    padding: 15px 0px;
+    flex-direction: column;
+  }
+}
+.footer-body__column { 
+  @media (max-width:$md2+px){
+    &:first-child{
+      @include flexorder(2);
+    }
+    &:last-child{
+      @include flexorder(1);
+      margin-bottom: 10px;
+    }
+  }
+}
+.footer__text { 
+    font-size: 15px;
+    color: rgb(77, 77, 77);
+    a{border-bottom: 1px solid;color: #4d4d4d;
+      &:hover{border-bottom: none;}
+    }
+    @media (max-width:$md2+px){
+      text-align: center;
+      line-height: 20px;
+    }
+}
+.footer__logo { }
+
 //<ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>
 //@import "datepicker.scss";
 //@import "popover.min.scss";

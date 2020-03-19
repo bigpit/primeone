@@ -553,6 +553,204 @@ h6 {
   padding-right: 15px;
 }
 
+.contacts {
+  padding-top: 80px;
+}
+
+@media (max-width: 767.98px) {
+  .contacts {
+    padding-top: 30px;
+  }
+}
+
+.contacts__title {
+  font-size: 50px;
+  font-family: "Akzidenz-Grotesk BQ Condensed";
+  color: black;
+  text-transform: uppercase;
+  text-align: left;
+  letter-spacing: 5px;
+  margin-bottom: 30px;
+}
+
+.contacts-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.contact-body__column {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 767.98px) {
+  .contact-body__column {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+  }
+}
+
+.contacts-body__item {
+  font-size: 15px;
+  color: #000;
+  display: inline-block;
+  line-height: 27px;
+  padding-left: 35px;
+}
+
+.contacts-body__item--1 {
+  background: url("../img/contacts/01.svg") left no-repeat;
+}
+
+.contacts-body__item--2 {
+  background: url("../img/contacts/02.svg") left no-repeat;
+}
+
+.contacts-body__item--3 {
+  background: url("../img/contacts/03.svg") left no-repeat;
+}
+
+.contacts-social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0;
+}
+
+.contacts-social__item {
+  margin-right: 30px;
+}
+
+.contacts-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0;
+  background-color: #000;
+}
+
+@media (max-width: 767.98px) {
+  .contacts-content {
+    display: block;
+  }
+}
+
+.contacts-content__column {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+}
+
+.contacts-content__map {
+  height: 100%;
+}
+
+@media (max-width: 767.98px) {
+  .contacts-content__map {
+    height: 300px;
+  }
+}
+
+.contacts-content-form {
+  padding: 55px 60px;
+}
+
+@media (max-width: 767.98px) {
+  .contacts-content-form {
+    padding: 30px;
+  }
+}
+
+.contacts-content-form__title {
+  font-size: 25px;
+  font-family: "Akzidenz-Grotesk BQ Condensed";
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: 5px;
+  margin-bottom: 30px;
+}
+
+.contacts-content-form-body {
+  max-width: 350px;
+}
+
+@media (max-width: 767.98px) {
+  .contacts-content-form-body {
+    max-width: none;
+  }
+}
+
+.contacts-content-form-line {
+  margin-bottom: 25px;
+}
+
+.footer-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 125px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 767.98px) {
+  .footer-body {
+    height: auto;
+    padding: 15px 0px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .footer-body__column:first-child {
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 2;
+    order: 2;
+  }
+  .footer-body__column:last-child {
+    -webkit-box-ordinal-group: 1;
+    -ms-flex-order: 1;
+    order: 1;
+    margin-bottom: 10px;
+  }
+}
+
+.footer__text {
+  font-size: 15px;
+  color: #4d4d4d;
+}
+
+.footer__text a {
+  border-bottom: 1px solid;
+  color: #4d4d4d;
+}
+
+.footer__text a:hover {
+  border-bottom: none;
+}
+
+@media (max-width: 767.98px) {
+  .footer__text {
+    text-align: center;
+    line-height: 20px;
+  }
+}
+
 header {
   padding-top: 29px;
   padding-bottom: 33px;
